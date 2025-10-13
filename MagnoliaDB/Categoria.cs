@@ -10,8 +10,12 @@ public class Categoria
     public int Id { get; set; }
 
     [Required]
-    public string Nombre { get; set; }
+    public required string Nombre { get; set; }
 
     public bool EstaDisponible { get; set; } = true;
+
+    // EFCore
+    [NotMapped]
+    public List<Prenda>? Prendas { get; set; }
     
 }

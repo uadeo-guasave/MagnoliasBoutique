@@ -5,6 +5,7 @@ namespace MagnoliaDB;
 public class SqliteDbContext : DbContext
 {
     public DbSet<Categoria> Categorias { get; set; }
+    public DbSet<Prenda> Prendas { get; set; }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         // Obtener el directorio base donde está el ejecutable
