@@ -1,9 +1,12 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace MagnoliaDB;
 
+[Index(nameof(CodigoDeReferencia), IsUnique = true)]
 public class Prenda
 {
     public int Id { get; set; }
@@ -28,15 +31,9 @@ public class Prenda
     public required string Material { get; set; }
 
     [Required]
-    public decimal Costo { get; set; }
-
-    [Required]
     public decimal PrecioDeRenta { get; set; }
 
-    [Required]
-    public DateOnly FechaDeAlta { get; set; }
-
-    [Required]
+    [Required, ForeignKey("FK_Prendas_Categorias_CategoriaId_Id")]
     public int CategoriaId { get; set; }
     public string? ImagenUrl { get; set; }
 
