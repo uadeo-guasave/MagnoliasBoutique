@@ -40,4 +40,23 @@ public class Prenda
     // EFCore
     [NotMapped]
     public Categoria? Categoria { get; set; }
+
+    // Método para obtener las N prendas mas recientes
+    public static List<Prenda> obtenerLasPrendasMasRecientes(int numeroDePrendas)
+    {
+        using var db = new SqliteDbContext();
+        var prendas = db.Prendas
+                        .OrderByDescending(p => p.Id)
+                        .Take(numeroDePrendas)
+                        .ToList();
+        return prendas;
+    }
+
+    // Método para guardar una prenda nueva
+    public bool GuardarNuevaPrenda()
+    {
+        using var db = new SqliteDbContext();
+        db.Prendas.Add(this);
+        return db.SaveChanges() > 0;
+    }
 }
