@@ -42,12 +42,18 @@ public class Prenda
     public Categoria? Categoria { get; set; }
 
     // Método para obtener las N prendas mas recientes
-    public static List<Prenda> obtenerLasPrendasMasRecientes(int numeroDePrendas)
+    public static List<PrendaDTO> obtenerLasPrendasMasRecientes(int numeroDePrendas)
     {
         using var db = new SqliteDbContext();
         var prendas = db.Prendas
                         .OrderByDescending(p => p.Id)
                         .Take(numeroDePrendas)
+                        .Select(p => new PrendaDTO
+                        {
+                            Id = p.Id,
+                            Nombre = p.Nombre,
+                            ImagenUrl = p.ImagenUrl
+                        })
                         .ToList();
         return prendas;
     }
