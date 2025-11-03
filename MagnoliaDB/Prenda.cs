@@ -41,10 +41,9 @@ public class Prenda
     [NotMapped]
     public Categoria? Categoria { get; set; }
 
-    // Método para obtener las N prendas mas recientes
-    public static List<PrendaDTO> obtenerLasPrendasMasRecientes(int numeroDePrendas)
+    // Método para obtener las N prendas más recientes (inyectando el DbContext)
+    public static List<PrendaDTO> obtenerLasPrendasMasRecientes(SqliteDbContext db, int numeroDePrendas)
     {
-        using var db = new SqliteDbContext();
         var prendas = db.Prendas
                         .OrderByDescending(p => p.Id)
                         .Take(numeroDePrendas)
@@ -59,9 +58,8 @@ public class Prenda
     }
 
     // Método para guardar una prenda nueva
-    public bool GuardarNuevaPrenda()
+    public bool GuardarNuevaPrenda(SqliteDbContext db)
     {
-        using var db = new SqliteDbContext();
         db.Prendas.Add(this);
         return db.SaveChanges() > 0;
     }
