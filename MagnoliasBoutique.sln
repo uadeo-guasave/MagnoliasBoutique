@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagnoliaWebAPI", "MagnoliaW
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagnoliaWebAPI9", "MagnoliaWebAPI9\MagnoliaWebAPI9.csproj", "{6871A2A2-640A-4521-8DA7-6A333F836A00}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagnoliaWebAPI10", "MagnoliaWebAPI10\MagnoliaWebAPI10.csproj", "{195CCD80-2627-4B91-932E-B0E3CFE60721}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{6871A2A2-640A-4521-8DA7-6A333F836A00}.Release|x64.Build.0 = Release|Any CPU
 		{6871A2A2-640A-4521-8DA7-6A333F836A00}.Release|x86.ActiveCfg = Release|Any CPU
 		{6871A2A2-640A-4521-8DA7-6A333F836A00}.Release|x86.Build.0 = Release|Any CPU
+		{195CCD80-2627-4B91-932E-B0E3CFE60721}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{195CCD80-2627-4B91-932E-B0E3CFE60721}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{195CCD80-2627-4B91-932E-B0E3CFE60721}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{195CCD80-2627-4B91-932E-B0E3CFE60721}.Debug|x64.Build.0 = Debug|Any CPU
+		{195CCD80-2627-4B91-932E-B0E3CFE60721}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{195CCD80-2627-4B91-932E-B0E3CFE60721}.Debug|x86.Build.0 = Debug|Any CPU
+		{195CCD80-2627-4B91-932E-B0E3CFE60721}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{195CCD80-2627-4B91-932E-B0E3CFE60721}.Release|Any CPU.Build.0 = Release|Any CPU
+		{195CCD80-2627-4B91-932E-B0E3CFE60721}.Release|x64.ActiveCfg = Release|Any CPU
+		{195CCD80-2627-4B91-932E-B0E3CFE60721}.Release|x64.Build.0 = Release|Any CPU
+		{195CCD80-2627-4B91-932E-B0E3CFE60721}.Release|x86.ActiveCfg = Release|Any CPU
+		{195CCD80-2627-4B91-932E-B0E3CFE60721}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
