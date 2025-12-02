@@ -2,7 +2,6 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace MagnoliaDB;
 
@@ -35,32 +34,10 @@ public class Prenda
 
     [Required, ForeignKey("FK_Prendas_Categorias_CategoriaId_Id")]
     public int CategoriaId { get; set; }
+    
     public string? ImagenUrl { get; set; }
 
-    // EFCore
+    // EFCore - Navegación
     [NotMapped]
     public Categoria? Categoria { get; set; }
-
-    // Método para obtener las N prendas más recientes (inyectando el DbContext)
-    public static List<PrendaDTO> obtenerLasPrendasMasRecientes(SqliteDbContext db, int numeroDePrendas)
-    {
-        var prendas = db.Prendas
-                        .OrderByDescending(p => p.Id)
-                        .Take(numeroDePrendas)
-                        .Select(p => new PrendaDTO
-                        {
-                            Id = p.Id,
-                            Nombre = p.Nombre,
-                            ImagenUrl = p.ImagenUrl
-                        })
-                        .ToList();
-        return prendas;
-    }
-
-    // Método para guardar una prenda nueva
-    public bool GuardarNuevaPrenda(SqliteDbContext db)
-    {
-        db.Prendas.Add(this);
-        return db.SaveChanges() > 0;
-    }
 }
