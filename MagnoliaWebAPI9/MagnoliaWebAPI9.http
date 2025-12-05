@@ -1,6 +1,0 @@
-@MagnoliaWebAPI9_HostAddress = http://localhost:5093
-
-GET {{MagnoliaWebAPI9_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

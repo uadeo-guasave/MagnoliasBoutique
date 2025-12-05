@@ -5,10 +5,6 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagnoliaDB", "MagnoliaDB\MagnoliaDB.csproj", "{6C6CFA57-6B21-4A2D-943F-147AE7774FBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagnoliaWebAPI", "MagnoliaWebAPI\MagnoliaWebAPI.csproj", "{E23EDFF0-666E-4372-8341-549FFC305934}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagnoliaWebAPI9", "MagnoliaWebAPI9\MagnoliaWebAPI9.csproj", "{6871A2A2-640A-4521-8DA7-6A333F836A00}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagnoliaWebAPI10", "MagnoliaWebAPI10\MagnoliaWebAPI10.csproj", "{195CCD80-2627-4B91-932E-B0E3CFE60721}"
 EndProject
 Global
